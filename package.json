@@ -2,8 +2,8 @@
   "scripts": {
     "copy:html": "cpx ./src/index.html ./out",
     "copy:js": "cpx ./src/main.js ./out",
-    "copy:images": "cpx ./src/images ./out",
-    "copy": "mkdirp out && npm-run-all -p copy:*",
+    "copy:images": "cpx ./src/images/** ./out/images",
+    "copy": "npm-run-all -p copy:*",
     "watch:elm": "elm-live ./src/Main.elm --open --start-page=index.html --dir=out -- --output=./out/elm.js",
     "watch:sass": "node-sass --include-path scss ./src/sass/style.scss ./out/css/style.css --quiet --watch",
     "watch": "npm-run-all -p watch:*",
