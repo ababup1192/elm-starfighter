@@ -2,15 +2,15 @@
   "scripts": {
     "copy:html": "cpx ./src/index.html ./out",
     "copy:js": "cpx ./src/main.js ./out",
-    "copy:image": "mkdirp out/assets/image && cpx ./src/assets/image/* ./out/assets/image",
+    "copy:image": "mkdirp out/assets/images && cpx ./src/assets/images/* ./out/assets/images",
     "copy": "npm-run-all -p copy:*",
     "watch:elm": "elm-live ./src/Main.elm --open --start-page=index.html --dir=out -- --output=./out/elm.js --debug",
-    "watch:sass": "node-sass --include-path scss ./src/sass/style.scss ./out/css/style.css --quiet --watch",
+    "watch:sass": "npm run build:sass && node-sass -w --include-path scss ./src/style.scss ./out/style.css",
     "watch": "npm-run-all -p watch:*",
     "start": "npm-run-all -s copy watch",
     "test": "elm-test",
     "build:elm": "elm make src/Main.elm --output=./out/elm.js",
-    "build:sass": "node-sass --include-path scss ./src/sass/style.scss ./out/css/style.css",
+    "build:sass": "node-sass --include-path scss ./src/style.scss ./out/style.css",
     "build-all": "npm-run-all -p build:*",
     "build": "npm-run-all -s copy build-all"
   },
