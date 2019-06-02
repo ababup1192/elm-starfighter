@@ -8,11 +8,13 @@
     "watch:sass": "node-sass --include-path scss ./src/sass/style.scss ./out/css/style.css --watch --quiet",
     "watch": "npm-run-all -p watch:*",
     "sync": "browser-sync start --server --files \"**/*\" ",
-    "start": "npm-run-all -s copy watch sync"
+    "start": "npm-run-all -s copy watch sync",
+    "test": "elm-test"
   },
   "devDependencies": {
     "browser-sync": "^2.26.5",
     "elm": "^0.19.0-no-deps",
+    "elm-test": "^0.19.0-rev6",
     "elm-live": "^3.4.1",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5"
