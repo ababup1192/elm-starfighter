@@ -5,11 +5,14 @@
     "copy:images": "cpx ./src/images ./out",
     "copy": "mkdirp out && npm-run-all -p copy:*",
     "watch:elm": "elm-live ./src/Main.elm --open --start-page=index.html --dir=out -- --output=./out/elm.js",
-    "watch:sass": "node-sass --include-path scss ./src/sass/style.scss ./out/css/style.css --watch --quiet",
+    "watch:sass": "node-sass --include-path scss ./src/sass/style.scss ./out/css/style.css --quiet --watch",
     "watch": "npm-run-all -p watch:*",
-    "sync": "browser-sync start --server --files \"**/*\" ",
-    "start": "npm-run-all -s copy watch sync",
-    "test": "elm-test"
+    "start": "npm-run-all -s copy watch",
+    "test": "elm-test",
+    "build:elm": "elm make src/Main.elm --output=./out/elm.js",
+    "build:sass": "node-sass --include-path scss ./src/sass/style.scss ./out/css/style.css",
+    "build-all": "npm-run-all -p build:*",
+    "build": "npm-run-all -s copy build-all"
   },
   "devDependencies": {
     "browser-sync": "^2.26.5",
