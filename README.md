@@ -18,7 +18,7 @@ $ npm run build
 
 ## Netlify
 
-[demo](https://gallant-blackwell-ab6ede.netlify.com)
+[demo](https://elm-starfighter-abab.netlify.com)
 
 ### Build command
 
