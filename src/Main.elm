@@ -66,7 +66,7 @@ view model =
             ]
         , main_ []
             [ img
-                [ src "./assets/images/Elm_logo.png"
+                [ src "assets/images/Elm_logo.png"
                 , style "width" <| String.fromFloat logoSize ++ "em"
                 , style "height" <| String.fromFloat logoSize ++ "em"
                 ]
