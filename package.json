@@ -4,7 +4,7 @@
     "copy:js": "cpx ./src/main.js ./out",
     "copy:images": "cpx ./src/images/** ./out/images",
     "copy": "npm-run-all -p copy:*",
-    "watch:elm": "elm-live ./src/Main.elm --open --start-page=index.html --dir=out -- --output=./out/elm.js",
+    "watch:elm": "elm-live ./src/Main.elm --open --start-page=index.html --dir=out -- --output=./out/elm.js --debug",
     "watch:sass": "node-sass --include-path scss ./src/sass/style.scss ./out/css/style.css --quiet --watch",
     "watch": "npm-run-all -p watch:*",
     "start": "npm-run-all -s copy watch",
