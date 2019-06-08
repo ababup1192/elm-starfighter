@@ -1,4 +1,4 @@
-# elm startfighter
+# elm starfighter
 
 ## Installation
 
